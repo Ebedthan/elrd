@@ -1,0 +1,39 @@
+project:
+  type: book
+  output-dir: docs
+
+website:
+  sidebar:
+    style: "floating"
+    search: true
+    contents: auto
+
+book:
+  title: "Environnement logiciel et représentation des données pour les biologistes"
+  reader-mode: true
+  
+  page-footer:
+    left: |
+      Environnement logiciel et représentation des données pour les biologistes
+  author: "Anicet Ebou"
+  site-url: https://ebedthan.github.io/elrp/
+  repo-url: https://github.com/Ebedthan/elrp/
+  repo-branch: main
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - chapter1.qmd
+    - chapter2.qmd
+    - chapter3.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+    author-meta: "Anicet Ebou"
+    callout-appearance: simple
+
+editor: visual
+

@@ -1,0 +1,8 @@
+# Bienvenue {.unnumbered}
+
+Ce livre présente en quelques chapitres les points clés de l'environnement logiciel
+et de la représentation des données pour les biologistes.
+Il semble particulièrement les étudiants de première année dans les cursus axés sur la biologie,
+la chimie ou la géologie.
+
+Ce manuel est et sera toujours gratuit, sous licence [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/us/).
