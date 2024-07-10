@@ -37,7 +37,7 @@ L'Anglais, plus restrictif, utilise le terme de «__computer__ » = calculateur
 #### Le boulier
 
 ![Boulier (Source: [https://www.computerhistory.org/timeline/computers/
-](https://www.computerhistory.org/timeline/computers/))](images/boulier.png){width="40%"}
+](https://www.computerhistory.org/timeline/computers/))](images/boulier.png){#fig-boulier width="40%"}
 
 Le boulier a été inventé il y a environ 4 000 ans par les Chinois. C’est un support en bois sur lequel est fixé des tiges métalliques avec des perles. 
 Les perles étaient déplacées par l'opérateur du boulier selon certaines règles pour effectuer des calculs arithmétiques.
@@ -45,7 +45,7 @@ Les perles étaient déplacées par l'opérateur du boulier selon certaines règ
 
 #### Les os de Napier
 
-![Les os de Napier](images/napier.png){width="40%"}
+![Les os de Napier](images/napier.png){#fig-napier width="40%"}
 
 Les os de Napier: Il s'agit d'un appareil de calcul manuel inventé par John Napier (1550-1617). 
 Dans cet outil de calcul, il utilisait 9 bandes d'ivoire différentes ou os marqués de chiffres pour multiplier et diviser. 
@@ -53,7 +53,7 @@ C'est la première machine à utiliser la virgule décimale.
 
 #### La Pascaline
 
-![La Pascaline](images/pascaline.png){width="40%"}
+![La Pascaline](images/pascaline.png){#fig-pascaline width="40%"}
 
 La Pascaline est également connue sous le nom de machine arithmétique ou machine à additionner. 
 Elle a été inventée entre 1642 et 1644 par le mathématicien-philosophe français Blaise Pascal. 
@@ -77,7 +77,7 @@ Les bandes magnétiques et les bandes de papier étaient utilisées comme périp
 
 On retrouve dans cette génération des ordinateurs tels que l'ENIAC (Intégrateur et calculateur numérique électronique) et l'EDVAC (calculateur automatique à variables discrètes).
 
-![ENIAC](images/eniac.jpg)
+![ENIAC](images/eniac.jpg){#fig-eniac}
 
 #### Ordinateurs de seconde génération
 
@@ -90,7 +90,7 @@ Voici quelques ordinateurs appartenant à cette génération:
 - IBM 7094;  
 - CDC 1604.
 
-![IBM 1620](images/ibm1620.jpg)
+![IBM 1620](images/ibm1620.jpg){#fig-ibm1620}
 
 #### Ordinateurs de troisième génération
 
@@ -104,7 +104,7 @@ On avait par exemple:
 - Série IBM-360;  
 - Série Honeywell-6000.
 
-![IBM 360](images/ibm360.jpg)
+![IBM 360](images/ibm360.jpg){#fig-ibm360}
 
 #### Ordinateurs de quatrième génération
 
@@ -120,7 +120,7 @@ Elle a permis la production de puces à microprocesseur comportant dix millions 
 Les ordinateurs de cette génération utilisent du matériel de traitement parallèle et des logiciels d'IA (Intelligence Artificielle).
 Les langages de programmation utilisés dans cette génération étaient C, C++, Java, .Net, etc.
 
-![Ordinateurs de cinquième génération](images/gen5.png)
+![Ordinateurs de cinquième génération](images/gen5.png){#fig-gen5}
 
 Ces ordinateurs sont tous différents mais partagent une histoire commune.
 

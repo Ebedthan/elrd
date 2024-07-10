@@ -8,7 +8,7 @@
 
 <meta name="author" content="Anicet Ebou">
 
-<title>Environnement logiciel et représentation des données pour les biologistes - 1&nbsp; Éléments matériels du système informatique</title>
+<title>Environnement logiciel et représentation des données pour les biologistes - 1&nbsp; Partie matérielle de l’ordinateur</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -63,6 +63,8 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -75,7 +77,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chapter1.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Éléments matériels du système informatique</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chapter1.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Partie matérielle de l'ordinateur</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -117,13 +119,13 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introduction</span></a>
+ <span class="menu-text">Présentation de l’informatique et de l’ordinateur</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter1.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Éléments matériels du système informatique</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Partie matérielle de l’ordinateur</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -150,14 +152,26 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#architecture-de-von-neuman" id="toc-architecture-de-von-neuman" class="nav-link active" data-scroll-target="#architecture-de-von-neuman"><span class="header-section-number">1.1</span> Architecture de Von Neuman</a></li>
+  <li><a href="#composantes-dun-ordinateur" id="toc-composantes-dun-ordinateur" class="nav-link" data-scroll-target="#composantes-dun-ordinateur"><span class="header-section-number">1.2</span> Composantes d’un ordinateur</a>
+  <ul class="collapse">
+  <li><a href="#lunité-centrale" id="toc-lunité-centrale" class="nav-link" data-scroll-target="#lunité-centrale"><span class="header-section-number">1.2.1</span> L’unité centrale</a></li>
+  <li><a href="#les-unités-de-stockage" id="toc-les-unités-de-stockage" class="nav-link" data-scroll-target="#les-unités-de-stockage"><span class="header-section-number">1.2.2</span> Les unités de stockage</a></li>
+  <li><a href="#les-périphériques-dentréessorties" id="toc-les-périphériques-dentréessorties" class="nav-link" data-scroll-target="#les-périphériques-dentréessorties"><span class="header-section-number">1.2.3</span> Les périphériques d’entrées/sorties</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Éléments matériels du système informatique</span></h1>
+<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Partie matérielle de l’ordinateur</span></h1>
 </div>
 
 
@@ -172,8 +186,370 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<p>On distingue dans un ordinateur deux types de composantes: les composantes matérielles (hardware) et les composantes logicielles (software). Ce chapitre présente les composantes matérielles de l’ordinateur qui sont réparties entre l’unité centrale, les unités de stockages et les périphériques d’entrées/sorties.</p>
+<section id="architecture-de-von-neuman" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="architecture-de-von-neuman"><span class="header-section-number">1.1</span> Architecture de Von Neuman</h2>
+<p>L’architecture de von Neumann est un modèle structurel d’ordinateur dans lequel une unité de stockage (mémoire) unique sert à conserver à la fois les instructions et les données demandées ou produites par le calcul. Les ordinateurs actuels sont tous basés sur des versions améliorées de cette architecture.</p>
+<div id="fig-vonNeuman" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/neuman.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure&nbsp;1.1: Architecture de Von Neuman</figcaption>
+</figure>
+</div>
+<p>L’architecture de von Neumann décompose l’ordinateur en 4 parties distinctes:<br>
+- l’unité arithmétique et logique (UAL ou ALU en anglais) ou unité de traitement: son rôle est d’effectuer les opérations de base;<br>
+- l’unité de contrôle ou de commande (control unit), chargée du « séquençage » des opérations;<br>
+- la mémoire qui contient à la fois les données et le programme qui indiquera à l’unité de contrôle quels sont les calculs à faire sur ces données;<br>
+- les dispositifs d’entrée-sortie, qui permettent de communiquer avec le monde extérieur.</p>
+</section>
+<section id="composantes-dun-ordinateur" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="composantes-dun-ordinateur"><span class="header-section-number">1.2</span> Composantes d’un ordinateur</h2>
+<section id="lunité-centrale" class="level3" data-number="1.2.1">
+<h3 data-number="1.2.1" class="anchored" data-anchor-id="lunité-centrale"><span class="header-section-number">1.2.1</span> L’unité centrale</h3>
+<p>L’unité centrale, c’est l’organe principal de l’ordinateur, elle renferme plusieurs composants destinés au traitement et à la circulation de l’information. Dans l’unité centrale, on trouve:<br>
+- le bloc d’alimentation;<br>
+- la carte mère (microprocesseur, mémoire centrale, mémoire morte, l’horloge…);<br>
+- les mémoires de masses (disque dur, lecteurs de CD-ROM…);<br>
+- les cartes additionnelles (carte réseau, carte son, carte vidéo, …).</p>
+<section id="le-bloc-dalimentation" class="level4" data-number="1.2.1.1">
+<h4 data-number="1.2.1.1" class="anchored" data-anchor-id="le-bloc-dalimentation"><span class="header-section-number">1.2.1.1</span> Le bloc d’alimentation</h4>
+<p>Le boîtier héberge un bloc d’alimentation électrique, chargé de fournir un courant électrique stable et continu à l’ensemble des éléments de l’ordinateur.</p>
+<div id="fig-blocAlimentation" class="quarto-layout-panel">
+<figure class="figure">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/alimentation1.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Exemple 1</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/alimentation2.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Exemple 2</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1.2: Bloc d’alimentation</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="carte-mère" class="level4" data-number="1.2.1.2">
+<h4 data-number="1.2.1.2" class="anchored" data-anchor-id="carte-mère"><span class="header-section-number">1.2.1.2</span> Carte mère</h4>
+<p>La carte mère (motherboard en anglais) est le circuit imprimé principal de l’ordinateur. Sur cette carte, tous les composants du PC sont connectés. La carte mère contient entre autres : le socket (connecteur) pour le processeur, des supports mémoire vive, des ports pour les cartes d’extension.</p>
+<div id="fig-motherboard" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/cartemere.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure&nbsp;1.3: Carte mère</figcaption>
+</figure>
+</div>
+</section>
+<section id="microprocesseur" class="level4" data-number="1.2.1.3">
+<h4 data-number="1.2.1.3" class="anchored" data-anchor-id="microprocesseur"><span class="header-section-number">1.2.1.3</span> Microprocesseur</h4>
+<p>Le microprocesseur (CPU : Central Processing Unit ou Unité Centrale de Traitement) est le cerveau de l’ordinateur. Il permet de manipuler, de circuler les informations et d’exécuter les instructions stockées en mémoire. Toute l’activité de l’ordinateur est cadencée par une horloge unique.</p>
+<div id="fig-micro" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/microprocesseur.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure&nbsp;1.4: Microprocesseur</figcaption>
+</figure>
+</div>
+<p>Le microprocesseur est caractérisé par la cadence maximale à laquelle il est capable de travailler, par la taille et le nombre de données qu’il peut manipuler. Plus la circulation des données est rapide, plus l’ordinateur sera jugé performant.</p>
+<p>On emploie généralement les termes suivants:<br>
+- Fréquence de l’horloge: la fréquence de l’horloge de la carte mère qui cadence le microprocesseur;<br>
+- Largeur des données: Le premier nombre indique le nombre de bits sur lequel une opération est faite. Le second nombre indique le nombre de bits transférés à la fois entre la mémoire et le microprocesseur;<br>
+- MIPS: le nombre de millions d’instructions complétées par le microprocesseur en une seconde.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Date</th>
+<th>Processeur / Système</th>
+<th>Frquence de l’horloge</th>
+<th>MIPS</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1951</td>
+<td>UNIVAC I</td>
+<td>2,25 MHz</td>
+<td>0,002</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>1981</td>
+<td>Motorola 6802</td>
+<td>3,58 MHz</td>
+<td>0,5</td>
+<td><a href="http://www.system16.com/hardware.php?id=735">source</a></td>
+</tr>
+<tr class="odd">
+<td>1991</td>
+<td>Intel i860</td>
+<td>50 MHz</td>
+<td>50</td>
+<td><a href="https://archive.today/20130625223553/http://alacron.com/index.php?src=gendocs&amp;ref=Inteli860_basedBusBoardsFT_200_VME&amp;category=news">source</a></td>
+</tr>
+<tr class="even">
+<td>1994</td>
+<td>Intel DX4</td>
+<td>100 MHz</td>
+<td>70</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>1994</td>
+<td>Intel Pentium</td>
+<td>100 MHz</td>
+<td>188</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>1996</td>
+<td>Intel Pentium Pro</td>
+<td>200 MHz</td>
+<td>541</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>1999</td>
+<td>Intel Pentium III</td>
+<td>600 MHz</td>
+<td>2054</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>2003</td>
+<td>Intel Pentium 4 Extreme Edition</td>
+<td>3,2 GHz</td>
+<td>9726</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>2008</td>
+<td>Intel Core i7 920 (4-core)</td>
+<td>2,93 GHz</td>
+<td>82300</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>2011</td>
+<td>Intel Core i7 875K</td>
+<td>2,93 GHz</td>
+<td>92100</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>2016</td>
+<td>Intel Core i7 6950X (10-core)</td>
+<td>3,5 GHz</td>
+<td>320440</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>2021</td>
+<td>Intel Core i5-11600K (6-core)</td>
+<td>4,92 GHz</td>
+<td>346350</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Le microprocesseur <a href="#fig-micro">Figure&nbsp;<span>1.4</span></a> est constitué:<br>
+- d’une unité de commande qui est responsable de la lecture en mémoire et du décodage des instructions;<br>
+- d’une unité de traitement (Unité Arithmétique et Logique (U.A.L.)) qui exécute les instructions.</p>
+<section id="lunité-de-commande" class="level5" data-number="1.2.1.3.1">
+<h5 data-number="1.2.1.3.1" class="anchored" data-anchor-id="lunité-de-commande"><span class="header-section-number">1.2.1.3.1</span> L’unité de commande</h5>
+<p>L’unité de commande est constituée de plusieurs organes qui permettent la recherche en mémoire et le décodage d’une instruction. L’unité de commande est constituée des éléments suivants:<br>
+- Le compteur ordinal: c’est un registre contenant l’adresse de l’instruction en cours;<br>
+- Le registre d’instruction: il contient l’instruction suivante;<br>
+- Le décodeur d’instructions: c’est un dispositif qui traduit le code de l’instruction reçu en signaux qui sont transmis au séquenceur;<br>
+- Le séquenceur: il est chargé de synchroniser l’exécution des instructions à la cadence de l’horloge. Il est ainsi chargé de l’envoi des signaux de commande.</p>
+</section>
+<section id="lunité-de-traitement" class="level5" data-number="1.2.1.3.2">
+<h5 data-number="1.2.1.3.2" class="anchored" data-anchor-id="lunité-de-traitement"><span class="header-section-number">1.2.1.3.2</span> L’unité de traitement</h5>
+<p>Cette unité utilise les données stockées en mémoire, effectue des calculs dont les résultats sont eux aussi stockées en mémoire ou acheminés vers un périphérique de sortie.</p>
+</section>
+</section>
+<section id="la-mémoire" class="level4" data-number="1.2.1.4">
+<h4 data-number="1.2.1.4" class="anchored" data-anchor-id="la-mémoire"><span class="header-section-number">1.2.1.4</span> La mémoire</h4>
+<p>La mémoire est un composant de base de l’ordinateur, son rôle est de stocker les données avant et pendant leur traitement par le processeur. Ces données sont d’apparence binaire et mémorisées sous forme d’impulsions électriques (une impulsion est égale à 1, aucune impulsion est égale à 0 ou l’inverse).</p>
+<section id="mémoire-vive" class="level5" data-number="1.2.1.4.1">
+<h5 data-number="1.2.1.4.1" class="anchored" data-anchor-id="mémoire-vive"><span class="header-section-number">1.2.1.4.1</span> Mémoire vive</h5>
+<p>La mémoire vive appelée également mémoire centrale ou RAM (Random Access Memory) permet de stocker temporairement les données et programmes en cours de traitement. Les données contenues dans la mémoire vive sont perdues lorsque le courant électrique est coupé. La mémoire vive se présente sous la forme de barrettes qu’on insère dans un connecteur de la carte mère. On peut souvent augmenter la taille mémoire en ajoutant des barrettes de RAM.</p>
+<p>Les caractéristiques de la mémoire vive sont:<br>
+- sa rapidité d’accès : cette rapidité est essentielle pour fournir rapidement les données au processeur;<br>
+- sa volatilité : cette volatilité implique que les données sont perdues dès que l’alimentation électrique est coupée.</p>
+<p>Pour mesurer la taille mémoire, on utilise l’Octet:<br>
+- Un octet = 8 bits;<br>
+- Un kilo-octet (Ko) = 1024 octets ≈ 103 octets;<br>
+- Un méga-octet (Mo) = (1024)2 octets ≈ 106 octets;<br>
+- Un giga-octet (Go) = (1024)3 octets ≈ 109 octets;<br>
+- Un tera-octet (To) = (1024)4 octets ≈ 1012 octets;</p>
+<p>On peut aussi parler de Kbits, Mbits, Gbits. 1Kbits = 103 bits, 1Mbits= 103 kbits, 1 Gbits= 103 Mbits.</p>
+</section>
+<section id="mémoire-morte" class="level5" data-number="1.2.1.4.2">
+<h5 data-number="1.2.1.4.2" class="anchored" data-anchor-id="mémoire-morte"><span class="header-section-number">1.2.1.4.2</span> Mémoire morte</h5>
+<p>La mémoire morte (en anglais ROM = Read Only Memory) est une mémoire en lecture seule, appelée aussi mémoire non volatile, c’est-à-dire une mémoire qui ne s’efface pas à l’extinction de l’ordinateur. Elle stocke le programme de base pour démarrer et utiliser un ordinateur (le BIOS : Basic Input Output System).</p>
+</section>
+<section id="mémoire-cache" class="level5" data-number="1.2.1.4.3">
+<h5 data-number="1.2.1.4.3" class="anchored" data-anchor-id="mémoire-cache"><span class="header-section-number">1.2.1.4.3</span> Mémoire cache</h5>
+<p>La mémoire cache est une petite mémoire à accès rapide qui sert de tampon entre la mémoire vive et le processeur. Elle stocke les informations les plus souvent utilisées, permettant ainsi de réduire les états d’attente du microprocesseur. Lorsque le microprocesseur veut traiter des données, il accède d’abord au cache interne, s’il ne trouve pas les données, il accède au cache externe, puis à la RAM. On distingue deux types de caches:<br>
+- Cache interne: c’est une mémoire ultra rapide intégrée au microprocesseur. Elle stocke les données les plus utilisées;<br>
+- Cache externe: si le microprocesseur ne trouve pas les données dans la cache interne, il les cherche dans la cache externe. La cache externe est moins rapide que la cache interne mais plus rapide que la RAM.</p>
+<p>Le processeur est plus rapide que la mémoire RAM, celle-ci est beaucoup plus rapide que le disque dur. Une cache disque est utilisée entre le disque dur et la mémoire, lorsque l’ordinateur écrit sur le disque, les données sont placées dans la cache disque, elles sont alors écrites lentement (à la vitesse maximale du disque dur) alors que l’ordinateur peut s’occuper à faire autre chose. Lorsque l’ordinateur désire lire sur le disque, le cache disque peut avoir lu d’avance ou posséder des données lues auparavant, celles-ci sont alors tirées directement de la cache disque sans avoir à passer par le disque dur. Non seulement l’ordinateur peut-il lui même utiliser une partie de sa mémoire RAM comme cache entre lui et le disque dur (cache logicielle), mais les concepteurs de disques durs ont également ajouté une petite quantité de mémoire directement sur les contrôleurs de disques durs comme cache (cache matérielle) et c’est la norme actuellement dans la fabrication des disques dur.</p>
+</section>
+</section>
+<section id="les-bus" class="level4" data-number="1.2.1.5">
+<h4 data-number="1.2.1.5" class="anchored" data-anchor-id="les-bus"><span class="header-section-number">1.2.1.5</span> Les bus</h4>
+<p>Les bus constituent le système de communication central de l’ordinateur. Ils relient le processeur à la mémoire centrale et aux cartes d’extensions, c’est par leur intermédiaire que transitent toutes les informations entre les différents composants d’un ordinateur. On distingue trois types de bus :<br>
+- Le bus de données transférant les données entre le processeur et les autres parties. C’est un bus bidirectionnel;<br>
+- Le bus d’adresses par lequel le processeur indique l’adresse mémoire à laquelle sont écrites ou lues les données;<br>
+- Le bus de commande (ou contrôle) par lequel le processeur envoie des codes de commande aux différents organes.</p>
+<p>On a par exemple:<br>
+- Le bus système: appelé aussi FSB (Front Side Bus). C’est le bus qui assure le transport de données entre le processeur et la mémoire vive;<br>
+- Le bus série : c’est le bus que tous les PC possèdent, celui qui débouche sur le port servant à brancher une souris ou un modem, ou encore certains périphériques de jeux. Ses défauts sont sa lenteur extrême car les données ne sont envoyées que bit par bit (0 ou 1); - Le bus parallèle: c’est le bus qui communique avec le port parallèle, qui sert à brancher l’imprimante, le scanner, des graveurs externes, etc. Il est 8 fois plus rapide que le port série (les informations sont transmises par tranche de 8 bits en parallèle, soit 1 octet à la fois), mais toujours lent si on le compare aux bus USB;<br>
+- Le bus USB (Universal Serial Bus) : il est largement plus rapide que le bus parallèle et peut aller à la vitesse de 1.5 Mo par seconde pour l’USB 1.1. L’USB 2.0 peut quant à lui monter à 60 Mo par seconde et l’USB 3.0 jusqu’à 500 MB par seconde. Il est relié au port USB qui sert à brancher presque tous les périphériques du marché : webcams, modems, imprimantes, scanners, etc.<br>
+- Le bus AGP (accelerated graphic port) : Il est apparu avec le Pentium II en 1997. Il permet de traiter 32 bits à la fois et à une fréquence de bus de 66 MHz. Ses qualités sont sa rapidité (500 Mo par seconde pour le 2 X et 1 Go pour le 4 X, et maintenant 2 Go par seconde pour le 8x). Il communique avec le port AGP;</p>
+</section>
+<section id="connecteurs-dextension" class="level4" data-number="1.2.1.6">
+<h4 data-number="1.2.1.6" class="anchored" data-anchor-id="connecteurs-dextension"><span class="header-section-number">1.2.1.6</span> Connecteurs d’extension</h4>
+<p>Les connecteurs d’extension sont des emplacements disponibles sur la carte mère destinés à recevoir des cartes d’extension, c’est-à-dire des cartes offrant de nouvelles fonctionnalités à l’ordinateur. Il existe plusieurs sortes de connecteurs:<br>
+- Connecteur d’extension AGP : (Accelerated Graphics Port) est l’emplacement réservé à la carte graphique;<br>
+- Connecteurs d’extension PCI : (Peripheral Component Interconnect) est l’emplacement où sont connectées les différentes cartes de votre ordinateur (carte son, carte réseau, etc.).</p>
+<p>Parmi les cartes d’extension les plus courantes, on peut citer:<br>
+- Carte graphique : est une carte d’extension dont le rôle est de produire une image affichable sur un moniteur d’ordinateur;<br>
+- Carte son : est une carte d’extension permettant d’écouter de la musique et des sons sur votre ordinateur. Elle s’implante dans un connecteur PCI;<br>
+- Carte réseau : est une carte d’extension permettant de connecter un ordinateur à un réseau.</p>
+</section>
+<section id="ports-de-communication" class="level4" data-number="1.2.1.7">
+<h4 data-number="1.2.1.7" class="anchored" data-anchor-id="ports-de-communication"><span class="header-section-number">1.2.1.7</span> Ports de communication</h4>
+<p>Les ports d’entrée-sortie sont des éléments matériels de l’ordinateur, permettant au système de communiquer avec des éléments extérieurs, c’est-à-dire d’échanger des données, d’où l’appellation d’interface d’entrée-sortie.</p>
+<section id="ports-série" class="level5" data-number="1.2.1.7.1">
+<h5 data-number="1.2.1.7.1" class="anchored" data-anchor-id="ports-série"><span class="header-section-number">1.2.1.7.1</span> Ports série</h5>
+<p>Le port série est un port sur lequel on ne peut envoyer les données que bit par bit, les uns après les autres. Ce port peut se présenter sous la forme d’un connecteur 9 ou 25 broches (le nom du connecteur est DB-9 ou DB-25 suivant le nombre de broches). Sur un port série on peut brancher un modem, un scanner, une souris ou un appareil photo numérique.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/serie.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Port série</figcaption>
+</figure>
+</div>
+</section>
+<section id="port-parallèle" class="level5" data-number="1.2.1.7.2">
+<h5 data-number="1.2.1.7.2" class="anchored" data-anchor-id="port-parallèle"><span class="header-section-number">1.2.1.7.2</span> Port parallèle</h5>
+<p>Le port parallèle est basé sur un transfert de type parallèle. C’est-à-dire que les 8 bits d’un octet sont envoyés simultanément. Ce type de communication est nettement plus rapide que celui d’un port série. Un port parallèle permet de connecter une imprimante.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/parrallele.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Port parallèle</figcaption>
+</figure>
+</div>
+</section>
+<section id="port-usb" class="level5" data-number="1.2.1.7.3">
+<h5 data-number="1.2.1.7.3" class="anchored" data-anchor-id="port-usb"><span class="header-section-number">1.2.1.7.3</span> Port USB</h5>
+<p>Le port USB (Universal Serial Bus) est basé sur une architecture série pour deux raisons principales:<br>
+- L’interface série permet d’utiliser une cadence d’horloge beaucoup plus élevée qu’une interface parallèle (dans une architecture parallèle à haut débit, les bits circulant sur chaque fil arrivent avec des décalages, provoquant des erreurs);<br>
+- Le câble série est plus économique que le câble parallèle.</p>
+<p>Les ports USB supportent le Hot Plug &amp; Play, c’est-à-dire qu’un périphérique peut être connecté et reconnu, sans redémarrage de l’ordinateur. Les périphériques qui disposent actuellement de ce type de port sont les imprimantes, scanners, Webcams, etc.</p>
+</section>
+</section>
+</section>
+<section id="les-unités-de-stockage" class="level3" data-number="1.2.2">
+<h3 data-number="1.2.2" class="anchored" data-anchor-id="les-unités-de-stockage"><span class="header-section-number">1.2.2</span> Les unités de stockage</h3>
+<p>Une mémoire de masse est une mémoire de grande capacité, non volatile. Elle conserve les données de manière permanente. Les mémoires de masse les plus utilisées sont :<br>
+- le disque dur pour les informations qui devront être traitées ultérieurement;<br>
+- le CD-ROM et le DVD pour les copies de sauvegarde;<br>
+- la clé USB et disquette pour le transfert d’information entre micro-ordinateurs.</p>
+<section id="le-disque-dur" class="level4" data-number="1.2.2.1">
+<h4 data-number="1.2.2.1" class="anchored" data-anchor-id="le-disque-dur"><span class="header-section-number">1.2.2.1</span> Le disque dur</h4>
+<p>Le disque dur est un support composé de disques magnétiques sur lesquels on peut stocker de très grandes quantités d’informations (20 Go, 40 Go, 80 Go, 120 Go, …). Un disque dur est formé de plusieurs plateaux circulaires superposés entre lesquels flottent des têtes de lecture et écriture et d’un moteur central permettant la rotation de tous les plateaux en même temps.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/stockage.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Disque dur</figcaption>
+</figure>
+</div>
+<p>Chaque plateau est composé de pistes concentriques. Les pistes situées à un même rayon forment un cylindre. Les pistes sont ensuite découpées en secteurs qui sont l’unité élémentaire de stockage et dont la taille est de 512 octets. Les caractéristiques principales d’un disque dur sont les suivantes:<br>
+- Capacité: volume de données pouvant être stockées sur le disque;<br>
+- Taux de transfert (ou débit): quantité de données pouvant être lues ou écrites sur le disque par unité de temps. Il s’exprime en bits par seconde;<br>
+- Vitesse de rotation: vitesse à laquelle les plateaux tournent, exprimée en nombre de tours par minute. La vitesse des disques durs est de l’ordre de 7200 à 15000 rpm (rpm : Rotation Par Minute).</p>
+<p>Calcul de la taille (capacité) d’un disque dur:</p>
+<p><span class="math display">\[Capacité = Nt \times Nc \times Ns \times 512 o\]</span></p>
+<p>Ou:<br>
+- Nt: nombre de têtes (ou de faces)<br>
+- Nc: nombre de cylindres<br>
+- Ns: nombre de secteurs<br>
+- o: octets</p>
+</section>
+<section id="le-lecteur-cd-rom" class="level4" data-number="1.2.2.2">
+<h4 data-number="1.2.2.2" class="anchored" data-anchor-id="le-lecteur-cd-rom"><span class="header-section-number">1.2.2.2</span> Le lecteur CD-ROM</h4>
+<p>Le lecteur CD-ROM permet de lire les informations se trouvant sur les disques CD-ROM. Le CD-ROM (Compact Disc - Read Only Memory) est une mémoire de masse à lecture seule, les données y ont été inscrites une fois pour toute. On ne peut plus effacer leur contenu. Le CD-ROM est un disque optique de 12 cm de diamètre et de 1mm d’épaisseur, permettant de stocker des informations numériques correspondant à 650 Mo de données informatiques. Un trou circulaire en son milieu permet de le centrer sur la platine de lecture. Un lecteur CD-ROM est caractérisé par les éléments suivants:<br>
+- Vitesse : la vitesse d’un lecteur de CD-ROM est calculée par rapport à la vitesse d’un lecteur de CD audio. Un CD audio lit 150 Ko/s par seconde (1x). Un lecteur de CD-ROM capable de lire 30000 Ko/s sera appelé un lecteur 20x. Remarque : Le X représente une vitesse de 150 Ko/s, ce qui signifie qu’un lecteur de CD 2X à un débit de 2<em>150= 300 Ko/s alors qu’un lecteur de CD Rom 40X a un débit de 40 </em>150 = 6 000 Ko/s.<br>
+- Temps d’accès : est le temps moyen pour aller d’une partie du CD à une autre.</p>
+</section>
+<section id="le-graveur" class="level4" data-number="1.2.2.3">
+<h4 data-number="1.2.2.3" class="anchored" data-anchor-id="le-graveur"><span class="header-section-number">1.2.2.3</span> Le graveur</h4>
+<p>Le graveur de CD-ROM est un outil qui permet de réaliser des sauvegardes sur des CD-ROM. Il utilise deux sortes de disques : CD-R et CD-RW. Un graveur CD/DVD permet de lire ou graver des DVD, des CD audio et des CD de données.</p>
+</section>
+<section id="clé-usb" class="level4" data-number="1.2.2.4">
+<h4 data-number="1.2.2.4" class="anchored" data-anchor-id="clé-usb"><span class="header-section-number">1.2.2.4</span> Clé USB</h4>
+<p>Ce sont des lecteurs amovibles. Branchés sur un port USB, elles peuvent s’ajouter à tout moment sur un ordinateur allumé. Très pratique pour transférer des informations d’un ordinateur à l’autre.</p>
+</section>
+</section>
+<section id="les-périphériques-dentréessorties" class="level3" data-number="1.2.3">
+<h3 data-number="1.2.3" class="anchored" data-anchor-id="les-périphériques-dentréessorties"><span class="header-section-number">1.2.3</span> Les périphériques d’entrées/sorties</h3>
+<section id="clavier" class="level4" data-number="1.2.3.1">
+<h4 data-number="1.2.3.1" class="anchored" data-anchor-id="clavier"><span class="header-section-number">1.2.3.1</span> Clavier</h4>
+<p>Le clavier est un périphérique d’entrée (figure suivante). Il vous permet d’entrer du texte, des chiffres ou des commandes dans votre ordinateur. Il peut être AZERTY, QWERTY ou autre. On désigne par ces noms les “langues” des claviers dont les français ou anglais dont les premières touches sont A,Z,E,R,T,Y et Q,W,E,R,T,Y.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clavier.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Clavier</figcaption>
+</figure>
+</div>
+<p>Un clavier comporte 4 grandes zones:<br>
+- Le pavé numérique, rendu actif par la touche Verr num (contrôlée par un voyant), composé des 10 chiffres et des 4 opérations, ainsi que d’une touche entrée spécifique;<br>
+- Le bloc alphanumérique comporte toutes les lettres de l’alphabet, les 10 chiffres, les signes de ponctuation, la barre d’espace et divers autres symboles d’usage courant;<br>
+- Le pavé de flèches qui servent à déplacer le curseur en tous sens (gauche, droite, haut, bas), à sauter de page en page, à se positionner au début ou à la fin, à insérer ou supprimer;<br>
+- Les touches de fonction de F1 à F12 sont associées à des commandes. Ces touches spéciales permettent d’exécuter plus efficacement des tâches particulières. Les opérations réalisées par ces touches dépendent du logiciel utilisé. Par exemple, la touche F1 sert généralement à afficher l’aide sur l’utilisation du logiciel en cours.</p>
+</section>
+<section id="souris" class="level4" data-number="1.2.3.2">
+<h4 data-number="1.2.3.2" class="anchored" data-anchor-id="souris"><span class="header-section-number">1.2.3.2</span> Souris</h4>
+<p>La souris (périphérique d’entrée) est un périphérique de pointage servant à déplacer un curseur sur l’écran et permettant de sélectionner, déplacer, manipuler des objets grâce à des boutons:</p>
+<ul>
+<li>Le bouton gauche:
+<ul>
+<li>Cliquer (clic) est l’action consistant à appuyer une seule fois sur le bouton gauche de la souris, il permet de sélectionner une icône sur le bureau, sélectionner une commande à l’intérieur d’un menu, etc.<br>
+</li>
+<li>Double cliquer est l’action de cliquer deux fois brièvement sur le bouton gauche de la souris. Cela provoque, sur une icône, l’ouverture d’une fenêtre ou le lancement d’un programme.<br>
+</li>
+<li>Glisser déplacer : indique le déplacement d’un objet en maintenant le bouton gauche enfoncé et en déplaçant la souris.<br>
+</li>
+<li>Le bouton droit : Permet d’ouvrir un “menu contextuel” en rapport avec la situation du pointeur ou l’objet sélectionné.<br>
+</li>
+</ul></li>
+<li>Le bouton droit: Permet d’ouvrir un “menu contextuel” en rapport avec la situation du pointeur ou l’objet sélectionné.<br>
+</li>
+<li>Molette: Elle permet de monter et de descendre rapidement dans l’affichage d’un document.</li>
+</ul>
+</section>
+<section id="lecran" class="level4" data-number="1.2.3.3">
+<h4 data-number="1.2.3.3" class="anchored" data-anchor-id="lecran"><span class="header-section-number">1.2.3.3</span> L’ecran</h4>
+<p>L’écran est un périphérique de sortie qui permet d’afficher du texte et des images traités par l’ordinateur. Il se caractérise par les paramètres suivants:</p>
+<ul>
+<li>La taille de l’écran : Elle se mesure en “pouces” (1 pouce = 2,54 cm) et correspond à la mesure de la diagonale de l’écran.<br>
+</li>
+<li>La résolution de l’écran : Elle représente le nombre de points que l’écran peut afficher. Elle indique le nombre de pixels (points) affichable à l’écran. Elle est donnée en fonction du nombre de points sur la largeur, suivi de celle en hauteur. Ce nombre de points est actuellement généralement compris entre 640x480 (640 points en longueur, 480 points en largeur) et 1600x1200.</li>
+</ul>
 
 
+</section>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -412,7 +788,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./intro.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Introduction</span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Présentation de l’informatique et de l’ordinateur</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
