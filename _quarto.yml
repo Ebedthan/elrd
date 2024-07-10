@@ -9,16 +9,21 @@ website:
     contents: auto
 
 book:
-  title: "Environnement logiciel et représentation des données pour les biologistes"
+  title: "Environnement logiciel et représentation des données"
   reader-mode: true
   
   page-footer:
     left: |
-      Environnement logiciel et représentation des données pour les biologistes
+      Environnement logiciel et représentation des données écrit par Anicet Ebou.
+    #right: |
+    # This book was built with <a href="https://quarto.org/">Quarto</a>.
+  #cover-image: cover.jpg
+  #favicon: cover.jpg
   author: "Anicet Ebou"
-  site-url: https://ebedthan.github.io/elrp/
-  repo-url: https://github.com/Ebedthan/elrp/
+  site-url: https://ebedthan.github.io/elrd/
+  repo-url: https://github.com/Ebedthan/elrd/
   repo-branch: main
+  repo-actions: [issue]
   chapters:
     - index.qmd
     - intro.qmd
@@ -34,6 +39,7 @@ format:
     theme: cosmo
     author-meta: "Anicet Ebou"
     callout-appearance: simple
+    code-link: true
 
 editor: visual
 
